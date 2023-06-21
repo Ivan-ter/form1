@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sign-Up Form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">
+      <img id="doggy" src="/Charles.png" alt="dog overlooking a kitty" >
+      <img id="logo" src="/Logo.png" alt="Logo" width="300px">
+    </div>
+    
+    <div class="box2">
+      <div class="description">
+
+        <h4>This is not a real online service! You know you need something like this in your life to help you realize your deeepest dreams.<br>Sign up <i>now</i> to get started.</h4>
+        
+        <h4>You <i>know</i> you want to.</h4>
+
+      </div>
+      
+      <div class="main-content">
+        
+        <h3>Let's do this!</h3>
+        
+        <form action="post" onsubmit ="return validateForm()">
+          <div class="proforma">
+          
+            <div class="form-row">
+              <label for="first-name">First name</label>
+              <input type="text" name="first-name" id="first-name" pattern="([a-zA-Z]+)">
+            </div>
+            
+            <div class="form-row">
+              <label for="last-name">Last name</label>
+              <input type="text" name="last-name" id="last-name" pattern="([a-zA-Z]+)">    
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" pattern="([\w-\\.]+){2,63}@([a-zA-Z]+).(.[a-zA-Z]{2,10}){5,254}">    
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input type="tel" inputmode="numeric" name="phone" id="phone" pattern="(\d+)" minlength="7" maxlength="11">
+            </div>
+
+            <div class="form-row">
+              <label for="pwd1">Password</label>
+              <input minlength="8" type="password" name="pwd1" id="pwd1" autocomplete="new-password">
+              <span id = "message1" style="color:red"> </span>
+            </div>
+
+            <div class="form-row">
+              <label for="pwd2">Confirm password</label>
+              <input type="password" name="pwd2" id="pwd2" autocomplete="current-password">
+              <span id = "message2" style="color:red"> </span>
+            </div>
+            
+            <div class="foot">
+              <button>Create Account</button>
+              <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+
+          </div>  
+        </form>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
